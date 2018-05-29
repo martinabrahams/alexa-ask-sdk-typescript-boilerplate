@@ -1,0 +1,17 @@
+{
+  "name": "alexa-ask-sdk-typescript-boilerplate",
+  "version": "1.0.0",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch"
+  },
+  "devDependencies": {
+    "@types/node": "^10.1.2",
+    "typescript": "^2.8.3"
+  },
+  "dependencies": {
+    "ask-sdk": "^2.0.5"
+  }
+}

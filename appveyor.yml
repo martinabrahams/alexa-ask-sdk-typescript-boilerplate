@@ -1,0 +1,17 @@
+image: ubuntu
+
+test: off
+
+build: off
+
+build_script:
+  - sh ./build.sh
+
+after_build:
+  - echo Creating deploy.zip
+  #- 7z a ./deploy.zip ./dist/** ./node_modules -bd > NUL #-bb0 - not supported by appveyor version!? using NUL hides all output for this command, not ideal
+  - 7z a ./deploy.zip ./dist/** -bd > NUL
+  
+artifacts:
+  - path: deploy.zip
+    name: LambdaFunction
